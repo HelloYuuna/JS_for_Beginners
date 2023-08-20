@@ -37,14 +37,14 @@ function saveToDos() {
 function deleteToDo(event) {
     // 발생한 이벤트의 부모 요소 확인: parentElement
     const li = event.target.parentElement;
-    // console.log("deleteTargetParent:", li.id);
-    toDos = toDos.filter(toDO => toDO.id !== li.id);
+    toDos = toDos.filter(toDO => toDO.id !== parseInt(li.id));
 
     // const span = li.firstChild;
     // console.log("deleteTargetFirstChild:", span);
 
-    li.remove();
     // localStorage.removeItem(TODOS_KEY);
+    li.remove();
+    saveToDos();
 }
 
 /**
