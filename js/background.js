@@ -1,10 +1,10 @@
-const images = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+const images = ["2.jpg", "4.jpg", "5.jpg"];
 // console.log(images.length);
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
-// console.log(chosenImage);
-const bgImage = document.createElement("img");
-bgImage.src = `img/${chosenImage}`;
-// console.log(bgImage);
+const bgImgUrl = `url(img/${chosenImage})`;
+document.body.style.backgroundImage = bgImgUrl;
 
-document.body.appendChild(bgImage);
+// const bgImage = document.createElement("img");
+// bgImage.src = `img/${chosenImage}`;
+// document.body.appendChild(bgImage);

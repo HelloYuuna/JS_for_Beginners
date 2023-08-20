@@ -60,11 +60,11 @@ function paintToDo(newTodo) {
     span.innerText = newTodo.text;
 
     const button = document.createElement("button");
-    button.innerText = "🙁";
+    button.innerText = "😵";
     button.addEventListener("click", deleteToDo);
     // console.log(li);
-    li.appendChild(span);
     li.appendChild(button)
+    li.appendChild(span);
     toDoList.appendChild(li);
 }
 
